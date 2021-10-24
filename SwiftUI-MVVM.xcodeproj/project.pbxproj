@@ -11,6 +11,7 @@
 		4D0E513B27258B0900A08614 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E513A27258B0900A08614 /* ContentView.swift */; };
 		4D0E513D27258B0E00A08614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D0E513C27258B0E00A08614 /* Assets.xcassets */; };
 		4D0E514027258B0E00A08614 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D0E513F27258B0E00A08614 /* Preview Assets.xcassets */; };
+		4D0E514727258B2A00A08614 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E514627258B2A00A08614 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4D0E513A27258B0900A08614 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D0E513C27258B0E00A08614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D0E513F27258B0E00A08614 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D0E514627258B2A00A08614 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				4D0E513827258B0900A08614 /* SwiftUI_MVVMApp.swift */,
 				4D0E513A27258B0900A08614 /* ContentView.swift */,
+				4D0E514627258B2A00A08614 /* Model.swift */,
 				4D0E513C27258B0E00A08614 /* Assets.xcassets */,
 				4D0E513E27258B0E00A08614 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0E514727258B2A00A08614 /* Model.swift in Sources */,
 				4D0E513B27258B0900A08614 /* ContentView.swift in Sources */,
 				4D0E513927258B0900A08614 /* SwiftUI_MVVMApp.swift in Sources */,
 			);

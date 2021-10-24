@@ -1,21 +1,39 @@
-//
-//  ContentView.swift
-//  SwiftUI-MVVM
-//
-//  Created by R. Mark Volkmann on 10/24/21.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct DogView: View {
+    var dog: Dog
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        let text = Text("\(dog.name) is a \(dog.breed)")
+        if dog.selected {
+            text.bold()
+        } else {
+            text
+        }
+    }
+}
+
+struct ContentView: View {
+    // Adding the @ObservedObject property wrapper subscribes to changes.
+    @ObservedObject var model: Model // Selecting a dog mutates this.
+    
+    var body: some View {
+        VStack {
+            Text("Dogs (\(model.dogs.count))").font(.title).padding()
+            VStack(alignment: .leading) {
+                ForEach(model.dogs) { dog in
+                    DogView(dog: dog).onTapGesture {
+                        model.toggle(dog)
+                    }
+                }
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let model = Model()
+        ContentView(model: model)
     }
 }
