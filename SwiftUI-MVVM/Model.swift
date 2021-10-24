@@ -18,9 +18,12 @@ struct Dog: CustomStringConvertible, Identifiable {
     }
 }
 
-//TODO: Should this be a class instead of a struct?
-// Things that conform to ObservableObject can publish changes.
-// They gain an objectWillChange method.
+// This must be a class instead of a struct
+// in order to conform to the ObservableObject protocol.
+// Things that do this gain an objectWillChange method that publishes changes.
+// This can be called directly before changes are made.
+// Alternatively, if the properties that can be changed are annotated with
+// the @Published property wrapper, changes will be published automatically.
 class Model: ObservableObject {
     // The @Published property wrapper causes changes to be published.
     @Published var dogs: [Dog] = []
